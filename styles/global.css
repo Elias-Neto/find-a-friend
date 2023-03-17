@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body,
+input,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Nunito", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  transition: filter 0.2s;
+}
+
+button:hover,
+a:hover {
+  filter: brightness(0.9);
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}

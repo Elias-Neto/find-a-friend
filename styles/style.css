@@ -1,0 +1,60 @@
+header {
+  background-color: var(--RED-900);
+  padding: 2.4rem 2rem;
+
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.logo-wrapper {
+  gap: 0.6rem;
+}
+
+.menu-button {
+  padding: 1.2rem;
+  background-color: var(--WHITE);
+  border-radius: 0.8rem;
+  border: none;
+}
+
+.icon-closeMenu {
+  display: none;
+}
+
+header::after {
+  content: "";
+  height: 0.1rem;
+  width: 90%;
+  background-color: var(--WHITE);
+  opacity: 0.2;
+
+  display: block;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.menu {
+  background-color: var(--RED-900);
+  padding: 3rem 2rem;
+  border-radius: 0 0 2rem 2rem;
+  width: 100%;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--WHITE);
+
+  flex-direction: column;
+  gap: 1.2rem;
+
+  position: absolute;
+  top: -14.4rem;
+  z-index: -1;
+
+  transition: 0.2s;
+}
+
+.menu.open {
+  top: inherit;
+}
