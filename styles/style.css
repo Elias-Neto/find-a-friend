@@ -56,5 +56,5 @@ header::after {
 }
 
 .menu.open {
-  top: inherit;
+  top: 8.8rem;
 }
