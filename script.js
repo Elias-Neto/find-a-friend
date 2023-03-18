@@ -1,8 +1,8 @@
 const buttonMenu = document.querySelector(".menu-button")
-const menu = document.querySelector(".menu")
+const nav = document.querySelector("nav")
 
 function handleMenu() {
-  menu.classList.toggle("open")
+  nav.classList.toggle("open")
 }
 
 buttonMenu.addEventListener("click", handleMenu)

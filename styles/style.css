@@ -22,7 +22,7 @@ header {
   display: none;
 }
 
-header::after {
+nav::before {
   content: "";
   height: 0.1rem;
   width: 90%;
@@ -32,29 +32,115 @@ header::after {
   display: block;
 
   position: absolute;
-  bottom: 0;
+  top: 0;
 }
 
-.menu {
+nav {
   background-color: var(--RED-900);
   padding: 3rem 2rem;
   border-radius: 0 0 2rem 2rem;
   width: 100%;
 
+  position: absolute;
+  top: -14.4rem;
+  right: 0;
+  z-index: -1;
+
+  transition: 0.2s;
+}
+
+nav ul {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--WHITE);
 
   flex-direction: column;
   gap: 1.2rem;
-
-  position: absolute;
-  top: -14.4rem;
-  z-index: -1;
-
-  transition: 0.2s;
 }
 
-.menu.open {
+nav a {
+  color: var(--WHITE);
+}
+
+nav.open {
   top: 8.8rem;
+}
+
+main {
+  background-color: var(--RED-800);
+
+  position: absolute;
+  z-index: -2;
+}
+
+.welcome {
+  color: var(--WHITE);
+
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.welcome .padding {
+  padding: 5rem 2rem;
+
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.welcome .friends-in-city {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.welcome .friends-in-city .image-wrapper img {
+  margin-right: -1.2rem;
+}
+
+.welcome .friends-in-city p {
+  font-size: 1.4rem;
+}
+
+.welcome .friends-in-city p span {
+  font-weight: 800;
+}
+
+.welcome h1 {
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 110%;
+}
+
+.welcome .grid {
+  display: grid;
+  grid-template-columns: 3rem auto 3rem;
+  grid-gap: 2rem;
+}
+
+.welcome .grid .box {
+  background: var(--RED-900);
+}
+
+.welcome .grid .box:nth-child(2) {
+  background: none;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: relative;
+}
+
+.welcome .grid .background {
+  background: var(--RED-GRADIENT);
+  height: 25rem;
+  width: 100%;
+}
+
+.welcome .grid .img {
+  height: 30rem;
+  width: 50%;
+  background-color: #ccc;
+
+  position: absolute;
+  z-index: 1;
 }
