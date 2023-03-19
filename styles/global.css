@@ -16,6 +16,10 @@ button {
   font-family: "Nunito", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 button {
   cursor: pointer;
 }
@@ -40,4 +44,8 @@ ul {
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }

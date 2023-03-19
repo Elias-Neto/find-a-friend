@@ -33,15 +33,15 @@
           class="icon-openMenu"
         />
         <img
-          src="./assets/icon-openMenu.svg"
+          src="./assets/icon-closeMenu.svg"
           alt="Ícone de fechar menu"
-          class="icon-closeMenu"
+          class="icon-closeMenu hidden"
         />
       </button>
 
       <nav>
         <ul class="flex">
-          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">Home</a></li>
           <li><a href="#">Sobre o app</a></li>
           <li><a href="#">Animais disponíveis</a></li>
           <li><a href="#">Sobre a FindAFriend</a></li>
@@ -51,9 +51,9 @@
     </header>
 
     <main>
-      <section class="welcome flex">
+      <section class="welcome grid">
         <div class="padding flex">
-          <div class="friends-in-city">
+          <div class="friends-in-city flex">
             <div class="image-wrapper flex">
               <img src="./assets/dog1.png" alt="Foto de um cachorrinho" />
               <img src="./assets/cat1.png" alt="Foto de um gatinho " />
@@ -69,14 +69,24 @@
             a felicidade <br />
             para o seu lar
           </h1>
+
+          <p>
+            Encontre o animal de estimação ideal <br />
+            para seu estilo de vida!
+          </p>
         </div>
 
         <div class="grid">
-          <div class="box"></div>
           <div class="box flex">
-            <div class="img"></div>
-            <div class="background"></div>
+            <button>Acesse Agora</button>
           </div>
+          <div class="box flex">
+            <img src="./assets/dog3.png" alt="Foto de um cachorrinho" />
+            <div class="background"></div>
+            <button>Acesse Agora</button>
+          </div>
+          <div class="box"></div>
+          <div class="box"></div>
           <div class="box"></div>
         </div>
       </section>

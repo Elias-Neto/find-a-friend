@@ -7,22 +7,23 @@ header {
   position: relative;
 }
 
-.logo-wrapper {
+header .logo-wrapper {
   gap: 0.6rem;
 }
 
-.menu-button {
+header .menu-button {
   padding: 1.2rem;
   background-color: var(--WHITE);
   border-radius: 0.8rem;
   border: none;
 }
 
-.icon-closeMenu {
+.icon-closeMenu.hidden,
+.icon-openMenu.hidden {
   display: none;
 }
 
-nav::before {
+header nav::before {
   content: "";
   height: 0.1rem;
   width: 90%;
@@ -35,7 +36,7 @@ nav::before {
   top: 0;
 }
 
-nav {
+header nav {
   background-color: var(--RED-900);
   padding: 3rem 2rem;
   border-radius: 0 0 2rem 2rem;
@@ -49,7 +50,11 @@ nav {
   transition: 0.2s;
 }
 
-nav ul {
+header nav.open {
+  top: 8.8rem;
+}
+
+header nav ul {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--WHITE);
@@ -58,16 +63,18 @@ nav ul {
   gap: 1.2rem;
 }
 
-nav a {
+header nav ul li a {
   color: var(--WHITE);
+  opacity: 0.5;
 }
 
-nav.open {
-  top: 8.8rem;
+header nav ul li a.active {
+  opacity: 1;
 }
 
 main {
   background-color: var(--RED-800);
+  max-width: 100vw;
 
   position: absolute;
   z-index: -2;
@@ -76,8 +83,10 @@ main {
 .welcome {
   color: var(--WHITE);
 
-  flex-direction: column;
   gap: 3.2rem;
+
+  padding-bottom: 5rem;
+  width: 100vw;
 }
 
 .welcome .padding {
@@ -111,17 +120,27 @@ main {
 }
 
 .welcome .grid {
-  display: grid;
-  grid-template-columns: 3rem auto 3rem;
-  grid-gap: 2rem;
+  grid-template-columns: 2rem auto 2rem;
+  grid-gap: 1rem;
 }
 
 .welcome .grid .box {
   background: var(--RED-900);
 }
 
+.welcome .grid .box:nth-child(1) {
+  border-radius: 0 2rem 2rem 0;
+}
+
+.welcome .grid .box:nth-child(1) button {
+  display: none;
+}
+
 .welcome .grid .box:nth-child(2) {
   background: none;
+  height: 30rem;
+  width: 25rem;
+  margin: auto;
 
   flex-direction: column;
   align-items: center;
@@ -130,17 +149,181 @@ main {
   position: relative;
 }
 
-.welcome .grid .background {
-  background: var(--RED-GRADIENT);
-  height: 25rem;
-  width: 100%;
-}
-
-.welcome .grid .img {
-  height: 30rem;
-  width: 50%;
-  background-color: #ccc;
+.welcome .grid .box:nth-child(2) img {
+  height: 100%;
 
   position: absolute;
   z-index: 1;
+}
+
+.welcome .grid .box:nth-child(2) .background {
+  background: var(--RED-GRADIENT);
+  height: 90%;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.welcome .grid .box:nth-child(2) button {
+  position: absolute;
+  z-index: 2;
+  bottom: 1rem;
+}
+
+.welcome .grid .box:nth-child(3) {
+  border-radius: 2rem 0 0 2rem;
+}
+
+.welcome .grid .box:nth-child(4),
+.welcome .grid .box:nth-child(5) {
+  display: none;
+}
+
+.welcome .grid .box button {
+  border: none;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 1rem;
+
+  color: var(--BLUE);
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .welcome {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 5rem 0 0 2rem;
+  }
+
+  .welcome .padding {
+    padding: 0 0;
+  }
+
+  .welcome .grid {
+    grid-template:
+      "A B" auto
+      "C B" 10rem
+      "D E" 5rem
+      / auto 5rem;
+
+    gap: 2rem;
+  }
+
+  .welcome .grid .box:nth-child(1) {
+    grid-area: C;
+
+    border-radius: 2rem;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome .grid .box:nth-child(1) button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .welcome .grid .box:nth-child(2) {
+    grid-area: A;
+    width: 100%;
+  }
+
+  .welcome .grid .box:nth-child(2) img {
+    height: 108%;
+  }
+
+  .welcome .grid .box:nth-child(2) .background {
+    height: 100%;
+  }
+
+  .welcome .grid .box:nth-child(2) button {
+    display: none;
+  }
+
+  .welcome .grid .box:nth-child(3) {
+    grid-area: D;
+
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .welcome .grid .box:nth-child(4) {
+    grid-area: E;
+
+    border-radius: 2rem 0 0 0;
+    display: inherit;
+  }
+
+  .welcome .grid .box:nth-child(5) {
+    grid-area: B;
+
+    border-radius: 2rem 0 0 2rem;
+    display: inherit;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .menu-button {
+    display: none;
+  }
+
+  header nav::before {
+    display: none;
+  }
+
+  header nav {
+    background: none;
+    padding: 0 0;
+    border-radius: 0;
+    width: fit-content;
+
+    position: inherit;
+    top: 0;
+    z-index: 0;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 3.6rem;
+  }
+
+  .welcome .friends-in-city p {
+    font-size: 1.6rem;
+  }
+
+  .welcome .friends-in-city {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .welcome h1 {
+    font-size: 6.4rem;
+  }
+
+  .welcome p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    background-color: var(--RED-800);
+    padding: 4rem 10rem;
+  }
+
+  .welcome {
+    padding-left: 10rem;
+  }
+
+  .welcome h1 {
+    font-size: 7.2rem;
+  }
+
+  .welcome .grid {
+    grid-template:
+      "A B" auto
+      "C B" 10rem
+      "D E" 5rem
+      / auto 10rem;
+  }
 }
