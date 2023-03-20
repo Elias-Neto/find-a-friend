@@ -5,7 +5,7 @@
 <img src="">
 
 <div align="center">
-    <a href="elias-neto.github.io/find-a-friend/" target="_blank"> Veja o Site</a>
+    <a href="https://elias-neto.github.io/find-a-friend/" target="_blank"> Veja o Site</a>
 </div>
 
 <br>
