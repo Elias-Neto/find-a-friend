@@ -29,7 +29,7 @@ Depois é só entrar em contato com a ONG para agendar uma visita e conhecer pes
 
 A FindAFriend acredita que todo bichinho merece uma vida confortável e segura. Por isso, cria soluções que ajudam ONGs e entidades protetoras a conectar pessoas adotantes e animais resgatados. Atualmente, a empresa recebeu um grande investimento de uma indústria de medicina animal e agora precisa evoluir seu único produto ativo - o FindAFriend, para atender às expectativas do investidor.
 
-## Contexto do trabalho
+### Contexto do trabalho
 
 Os investidores estão planejando uma expansão para a empresa e, para isso acontecer de forma saudável, precisamos atualizar nossa marca antes que ela alcance novos usuários.
 
