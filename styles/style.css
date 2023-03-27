@@ -73,7 +73,6 @@ header nav ul li a.active {
 }
 
 main {
-  background-color: var(--RED-800);
   max-width: 100vw;
 
   position: absolute;
@@ -85,6 +84,7 @@ main {
 
   gap: 3.2rem;
 
+  background-color: var(--RED-800);
   padding-bottom: 5rem;
   width: 100vw;
 }
@@ -188,6 +188,57 @@ main {
   font-weight: 800;
 }
 
+.about {
+  flex-direction: column;
+  gap: 3.6rem;
+
+  /* max-width: 131.8rem; */
+  max-width: 144rem;
+  margin: auto;
+}
+
+.about .wrapper {
+  padding: 7rem 2rem 0 2rem;
+
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about .wrapper h2 {
+  color: var(--BLUE);
+  font-size: 3rem;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+}
+
+.about .wrapper .card-wrapper {
+  gap: 1rem;
+}
+
+.about .wrapper .card-wrapper .card {
+  border: 0.1rem solid var(--BORDER-RED-OPACITY);
+  border-radius: 2rem;
+  padding: 3rem;
+
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about .wrapper .card-wrapper .card span {
+  font-size: 2.5rem;
+}
+
+.about .wrapper .card-wrapper .card p {
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.about img.desktop {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .welcome {
     grid-template-columns: 1fr 1fr;
@@ -259,6 +310,39 @@ main {
     border-radius: 2rem 0 0 2rem;
     display: inherit;
   }
+
+  .about .wrapper h2 {
+    font-size: 4rem;
+  }
+
+  .about .wrapper .card-wrapper {
+    grid-template:
+      "A B" auto
+      "C C" auto
+      / auto auto;
+
+    gap: 1.8rem;
+  }
+
+  .about .wrapper .card-wrapper .card:nth-child(1) {
+    grid-area: A;
+  }
+
+  .about .wrapper .card-wrapper .card:nth-child(2) {
+    grid-area: B;
+  }
+
+  .about .wrapper .card-wrapper .card:nth-child(3) {
+    grid-area: C;
+  }
+
+  .about img.mobile {
+    display: none;
+  }
+
+  .about img.desktop {
+    display: inherit;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -303,6 +387,20 @@ main {
   .welcome p {
     font-size: 1.8rem;
   }
+
+  .about {
+    flex-direction: row-reverse;
+
+    padding: 7rem 2rem 7rem 2rem;
+  }
+
+  .about .wrapper {
+    padding: 0;
+  }
+
+  .about img.desktop {
+    width: 50rem;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -325,5 +423,27 @@ main {
       "C B" 10rem
       "D E" 5rem
       / auto 10rem;
+  }
+
+  .about {
+    padding: 10rem 0rem 10rem 0rem;
+
+    gap: 5.6rem;
+  }
+
+  .about .wrapper {
+    gap: 4rem;
+  }
+
+  .about .wrapper h2 {
+    font-size: 4.8rem;
+  }
+
+  .about .wrapper .card-wrapper {
+    gap: 3.2rem;
+  }
+
+  .about img.desktop {
+    width: fit-content;
   }
 }
