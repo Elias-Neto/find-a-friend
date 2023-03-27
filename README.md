@@ -51,7 +51,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [HTML](https://www.w3schools.com/html/)
 - [CSS](https://www.w3schools.com/css/)
-- [CSS](https://www.w3schools.com/js/)
+- [JavaScript](https://www.w3schools.com/js/)
 - [Figma](https://www.figma.com/design/)
 
 <br>
