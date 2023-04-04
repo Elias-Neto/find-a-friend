@@ -10,3 +10,29 @@ function handleMenu() {
 }
 
 buttonMenu.addEventListener("click", handleMenu)
+
+// Swiper Slides
+
+const swiper = new Swiper(".mySwiper", {
+  breakpoints: {
+    320: {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+    },
+    768: {
+      // centeredSlides: true,
+      slidesPerView: 1,
+      centerInsufficientSlides: true,
+      centeredSlides: true,
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    },
+  },
+})

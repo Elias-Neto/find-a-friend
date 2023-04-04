@@ -16,8 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <script src="./script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="flex">
@@ -139,6 +141,78 @@
           class="desktop"
         />
       </section>
+
+      <div class="many-friends">
+        <div class="wrapper-one">
+          <h2>Há muitos amigos esperando por você!</h2>
+
+          <p>
+            O FiendAFriend conecta pessoas que estão procurando por um animal de
+            estimação com animais que precisam de um lar amoroso. É fácil de
+            usar e você pode navegar por uma variedade de animais para encontrar
+            aquele que melhor se adapta ao seu estilo de vida e necessidades.
+          </p>
+        </div>
+
+        <div class="wrapper-two">
+          <button>Acesse agora</button>
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/cat3.png" alt="Foto de um gatinho" />
+                <span>Hamilton</span>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/dog4.png" alt="Foto de um cachorrinho" />
+                <span>Cleiton</span>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/cat4.png" alt="Foto de um gatinho" />
+                <span>Aldo</span>
+              </div>
+            </div>
+            <div class="swiper-button-prev">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 18L9 12L15 6"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="swiper-button-next">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 6L15 12L9 18"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

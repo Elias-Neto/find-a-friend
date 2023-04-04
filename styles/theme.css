@@ -1,11 +1,13 @@
 :root {
   --RED-900: #e44449;
   --RED-800: #f15156;
+  --RED-700: #fdeced;
 
   --RED-GRADIENT: linear-gradient(153.09deg, #f36a6f 17.23%, #e44449 73.77%);
 
   --WHITE: #ffffff;
   --BLUE: #0d3b66;
+  --YELLOW: #f4d35e;
 
   --BORDER-RED-OPACITY: #f151564d;
 }

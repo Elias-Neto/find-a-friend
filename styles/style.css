@@ -192,8 +192,7 @@ main {
   flex-direction: column;
   gap: 3.6rem;
 
-  /* max-width: 131.8rem; */
-  max-width: 144rem;
+  max-width: 136rem;
   margin: auto;
 }
 
@@ -217,6 +216,7 @@ main {
 
 .about .wrapper .card-wrapper .card {
   border: 0.1rem solid var(--BORDER-RED-OPACITY);
+  background-color: var(--RED-700);
   border-radius: 2rem;
   padding: 3rem;
 
@@ -237,6 +237,109 @@ main {
 
 .about img.desktop {
   display: none;
+}
+
+.many-friends {
+  background-color: var(--RED-800);
+  margin: 7rem 2rem;
+  padding: 6rem 3.2rem;
+  border-radius: 2rem;
+  max-width: 136rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.many-friends .wrapper-one {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.many-friends .wrapper-one h2 {
+  color: var(--YELLOW);
+  font-size: 3rem;
+}
+
+.many-friends .wrapper-one p {
+  color: var(--WHITE);
+}
+
+.many-friends .wrapper-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.many-friends .wrapper-two button {
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--WHITE);
+  padding-block: 2rem;
+  width: 100%;
+
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--BLUE);
+}
+
+.many-friends .wrapper-two {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.many-friends .wrapper-two .swiper {
+  width: calc(100vw - 5.2rem);
+  height: 100%;
+}
+
+.many-friends .wrapper-two .swiper-slide {
+  background-color: var(--WHITE);
+  width: 22rem !important;
+  height: 15rem;
+  border-radius: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.many-friends .wrapper-two .swiper-slide:nth-child(3) {
+  margin-right: 1rem;
+}
+
+.many-friends .wrapper-two .swiper-slide img {
+  width: 100%;
+}
+
+.many-friends .wrapper-two .swiper-slide span {
+  margin-bottom: 1rem;
+
+  color: var(--BLUE);
+  font-weight: 700;
+}
+
+.many-friends .wrapper-two .swiper-button-prev,
+.many-friends .wrapper-two .swiper-button-next,
+.many-friends .wrapper-two .swiper-pagination {
+  display: none;
+}
+
+.many-friends .wrapper-two .swiper-button-next.swiper-button-disabled,
+.many-friends .wrapper-two .swiper-button-prev.swiper-button-disabled {
+  background: none;
+  border: 0.1rem solid var(--WHITE);
+  opacity: 1;
+}
+
+.many-friends .wrapper-two .swiper-button-next.swiper-button-disabled svg path,
+.many-friends .wrapper-two .swiper-button-prev.swiper-button-disabled svg path {
+  stroke: var(--WHITE);
 }
 
 @media (min-width: 768px) {
@@ -343,6 +446,70 @@ main {
   .about img.desktop {
     display: inherit;
   }
+
+  .many-friends .wrapper-one p {
+    width: 100%;
+  }
+
+  .many-friends .wrapper-two .swiper {
+    width: 50rem;
+    height: 25rem;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .many-friends .wrapper-two .swiper-wrapper {
+    height: fit-content;
+  }
+
+  .many-friends .wrapper-two .swiper-slide {
+    height: 100%;
+    width: 30rem !important;
+  }
+
+  .many-friends .wrapper-two .swiper-slide:nth-child(1) {
+    margin-left: 10rem;
+  }
+
+  .many-friends .wrapper-two .swiper-slide:nth-child(2) {
+    margin-left: 21rem;
+  }
+
+  .many-friends .wrapper-two .swiper-slide:nth-child(3) {
+    margin-left: 19rem;
+  }
+
+  .many-friends .wrapper-two .swiper-button-prev,
+  .many-friends .wrapper-two .swiper-button-next {
+    background-color: var(--WHITE);
+    padding: 2.4rem;
+    border-radius: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .many-friends .wrapper-two .swiper-button-prev svg,
+  .many-friends .wrapper-two .swiper-button-next svg {
+    position: absolute;
+    z-index: 99;
+  }
+
+  .many-friends .wrapper-two .swiper-button-prev::after,
+  .many-friends .wrapper-two .swiper-button-next::after {
+    display: none;
+  }
+
+  .many-friends .wrapper-two .swiper-pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  .many-friends .wrapper-two .swiper-pagination span {
+    background-color: var(--WHITE);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -368,6 +535,10 @@ main {
   header nav ul {
     flex-direction: row;
     gap: 3.6rem;
+  }
+
+  main {
+    position: inherit;
   }
 
   .welcome .friends-in-city p {
@@ -398,8 +569,42 @@ main {
     padding: 0;
   }
 
+  .about .wrapper h2 {
+    font-size: 4.8rem;
+  }
+
   .about img.desktop {
     width: 50rem;
+  }
+
+  .many-friends .wrapper-one,
+  .many-friends .wrapper-two {
+    flex-direction: row;
+  }
+
+  .many-friends .wrapper-one {
+    gap: 3rem;
+  }
+
+  .many-friends .wrapper-one h2 {
+    font-size: 4rem;
+  }
+
+  .many-friends .wrapper-one p {
+    width: 100%;
+
+    font-size: 1.8rem;
+  }
+
+  .many-friends .wrapper-two button {
+    width: 30rem;
+    margin: auto;
+
+    font-size: 1.8rem;
+  }
+
+  .many-friends .wrapper-two .swiper-slide span {
+    font-size: 1.8rem;
   }
 }
 
@@ -426,7 +631,7 @@ main {
   }
 
   .about {
-    padding: 10rem 0rem 10rem 0rem;
+    padding: 10rem 0rem;
 
     gap: 5.6rem;
   }
@@ -443,7 +648,45 @@ main {
     gap: 3.2rem;
   }
 
+  .about .wrapper .card-wrapper .card p {
+    font-size: 1.6rem;
+  }
+
   .about img.desktop {
     width: fit-content;
+  }
+
+  .many-friends {
+    margin-inline: auto;
+  }
+
+  .many-friends .wrapper-one h2 {
+    font-size: 4.8rem;
+  }
+
+  .many-friends .wrapper-one p,
+  .many-friends .wrapper-two button {
+    font-size: 2rem;
+  }
+
+  .many-friends .wrapper-two .swiper {
+    width: 60rem;
+    height: 30rem;
+  }
+
+  .many-friends .wrapper-two .swiper-slide {
+    width: 40rem !important;
+  }
+
+  .many-friends .wrapper-two .swiper-slide:nth-child(1) {
+    margin-left: 11rem;
+  }
+
+  .many-friends .wrapper-two .swiper-slide:nth-child(2) {
+    margin-left: 20rem;
+  }
+
+  .many-friends .wrapper-two .swiper-slide:nth-child(3) {
+    margin-left: 20rem;
   }
 }
