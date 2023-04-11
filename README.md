@@ -2,7 +2,7 @@
 
 <br>
 
-<img src="">
+<img src="./.github/demonstracao.gif">
 
 <div align="center">
     <a href="https://elias-neto.github.io/find-a-friend/" target="_blank"> Veja o Site</a>
@@ -42,6 +42,7 @@ A nossa equipe precisa começar a desenvolver a nova Landing Page do FindAFriend
 - Fundamentos do HTML;
 - Fundamentos de CSS;
 - Manipulação da DOM;
+- Fazer Carrousel com Swiper.js;
 
 <br>
 
@@ -52,9 +53,10 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [HTML](https://www.w3schools.com/html/)
 - [CSS](https://www.w3schools.com/css/)
 - [JavaScript](https://www.w3schools.com/js/)
+- [Swiper.js](https://swiperjs.com/)
 - [Figma](https://www.figma.com/design/)
 
 <br>
 <br>
 
-<p align="center"> Desenvolvido com ❤ por Elias Neto 👋 <p>
+<p align="center"> Desenvolvido com ❤ por <a href="https://elias-neto.github.io/MyWebSite/html/index.html">Elias Neto</a> 👋 <p>
