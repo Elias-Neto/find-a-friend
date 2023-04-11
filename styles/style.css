@@ -79,6 +79,10 @@ main {
   z-index: -2;
 }
 
+main section:not(:nth-child(1)) {
+  max-width: 136rem;
+}
+
 .welcome {
   color: var(--WHITE);
 
@@ -192,15 +196,14 @@ main {
   flex-direction: column;
   gap: 3.6rem;
 
-  max-width: 136rem;
-  margin: auto;
+  margin-block: 7rem;
 }
 
 .about-app .wrapper {
-  padding: 7rem 2rem 0 2rem;
-
   flex-direction: column;
   gap: 2rem;
+
+  margin-inline: 2rem;
 }
 
 .about-app .wrapper h2 {
@@ -241,10 +244,9 @@ main {
 
 .many-friends {
   background-color: var(--RED-800);
-  margin: 7rem 2rem;
+  margin-inline: 2rem;
   padding: 6rem 3.2rem;
   border-radius: 2rem;
-  max-width: 136rem;
 
   flex-direction: column;
   gap: 2rem;
@@ -335,8 +337,7 @@ main {
 }
 
 .about-company {
-  padding: 0 2rem 7rem 2rem;
-  max-width: 136rem;
+  margin: 7rem 2rem;
 
   flex-direction: column;
   gap: 6rem;
@@ -393,6 +394,46 @@ main {
 
 .about-company .wrapper-two {
   display: none;
+}
+
+.contact {
+  padding: 9rem 3.2rem 7rem 3.2rem;
+  background-color: var(--BLUE);
+  margin: 0 2rem 3rem 2rem;
+  border-radius: 1rem;
+
+  position: relative;
+}
+
+.contact .wrapper-one {
+  color: var(--WHITE);
+
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.contact .wrapper-one h2 {
+  font-size: 3rem;
+  line-height: 110%;
+}
+
+.contact .wrapper-one .email-wrapper {
+  gap: 0.7rem;
+  align-items: center;
+
+  color: var(--YELLOW);
+}
+
+.contact .wrapper-one .email-wrapper span {
+  font-size: 1.4rem;
+}
+
+.contact img {
+  width: calc(100vw - 7.2rem);
+
+  position: absolute;
+  top: -3.2vw;
+  right: 0;
 }
 
 @media (min-width: 768px) {
@@ -569,12 +610,33 @@ main {
   }
 
   .about-company .wrapper-two {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template:
+      "A" auto
+      "B" auto
+      / auto auto;
     gap: 3.2rem;
+    place-items: center;
 
-    width: 100%;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .contact {
+    padding: 5rem;
+    height: 24rem;
+  }
+
+  .contact .wrapper-one {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .contact img {
+    z-index: 1;
+    top: -2.5rem;
+
+    max-width: 69.6rem;
   }
 }
 
@@ -628,7 +690,7 @@ main {
   .about-app {
     flex-direction: row-reverse;
 
-    padding: 7rem 2rem 7rem 2rem;
+    margin-block: 10rem;
   }
 
   .about-app .wrapper {
@@ -652,11 +714,14 @@ main {
     gap: 3rem;
   }
 
-  .many-friends .wrapper-one h2 {
+  .many-friends .wrapper-one h2,
+  .about-company .wrapper-one h2,
+  .contact .wrapper-one h2 {
     font-size: 4rem;
   }
 
-  .many-friends .wrapper-one p {
+  .many-friends .wrapper-one p,
+  .about-company .wrapper-one p {
     width: 100%;
 
     font-size: 1.8rem;
@@ -674,20 +739,23 @@ main {
   }
 
   .about-company {
-    display: grid;
-    grid-template:
-      "A" auto
-      "B" auto
-      / 30rem auto;
-    align-items: center;
+    margin-block: 10rem;
   }
 
-  .about-company .wrapper-one h2 {
-    font-size: 4rem;
+  .contact {
+    height: 28rem;
+    margin-bottom: 10rem;
   }
 
-  .about-company .wrapper-one p {
-    font-size: 1.8rem;
+  .contact .wrapper-one .email-wrapper span {
+    font-size: 1.6rem;
+  }
+
+  .contact img {
+    width: calc(100vw - 17.2rem);
+    max-width: 90rem;
+
+    top: -3vw;
   }
 }
 
@@ -709,10 +777,22 @@ main {
 
   .about-company .wrapper-two {
     justify-content: space-between;
+
+    grid-template:
+      "A" auto
+      / auto auto auto auto;
+
+    width: 100%;
   }
 
   .about-company .wrapper-two .card {
     width: 28rem;
+  }
+
+  .contact img {
+    top: -3.5rem;
+
+    max-width: 100rem;
   }
 }
 
@@ -720,6 +800,10 @@ main {
   header {
     background-color: var(--RED-800);
     padding: 4rem 10rem;
+  }
+
+  main section:not(:nth-child(1)) {
+    margin-inline: auto;
   }
 
   .welcome {
@@ -739,8 +823,6 @@ main {
   }
 
   .about-app {
-    padding: 10rem 0rem;
-
     gap: 5.6rem;
   }
 
@@ -762,11 +844,6 @@ main {
 
   .about-app img.desktop {
     width: fit-content;
-  }
-
-  .many-friends,
-  .about-company {
-    margin-inline: auto;
   }
 
   .many-friends .wrapper-one h2,
@@ -799,5 +876,13 @@ main {
 
   .many-friends .wrapper-two .swiper-slide:nth-child(3) {
     margin-left: 20rem;
+  }
+
+  .about-company {
+    margin-top: 10rem;
+  }
+
+  .contact {
+    margin-bottom: 20rem;
   }
 }
