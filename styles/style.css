@@ -188,7 +188,7 @@ main {
   font-weight: 800;
 }
 
-.about {
+.about-app {
   flex-direction: column;
   gap: 3.6rem;
 
@@ -196,25 +196,25 @@ main {
   margin: auto;
 }
 
-.about .wrapper {
+.about-app .wrapper {
   padding: 7rem 2rem 0 2rem;
 
   flex-direction: column;
   gap: 2rem;
 }
 
-.about .wrapper h2 {
+.about-app .wrapper h2 {
   color: var(--BLUE);
   font-size: 3rem;
   line-height: 110%;
   letter-spacing: -0.02em;
 }
 
-.about .wrapper .card-wrapper {
+.about-app .wrapper .card-wrapper {
   gap: 1rem;
 }
 
-.about .wrapper .card-wrapper .card {
+.about-app .wrapper .card-wrapper .card {
   border: 0.1rem solid var(--BORDER-RED-OPACITY);
   background-color: var(--RED-700);
   border-radius: 2rem;
@@ -224,18 +224,18 @@ main {
   gap: 3rem;
 }
 
-.about .wrapper .card-wrapper .card span {
+.about-app .wrapper .card-wrapper .card span {
   font-size: 2.5rem;
 }
 
-.about .wrapper .card-wrapper .card p {
+.about-app .wrapper .card-wrapper .card p {
   line-height: 110%;
   letter-spacing: -0.02em;
   font-size: 1.4rem;
   font-weight: 500;
 }
 
-.about img.desktop {
+.about-app img.desktop {
   display: none;
 }
 
@@ -246,7 +246,6 @@ main {
   border-radius: 2rem;
   max-width: 136rem;
 
-  display: flex;
   flex-direction: column;
   gap: 2rem;
 }
@@ -254,7 +253,6 @@ main {
 .many-friends .wrapper-one {
   text-align: center;
 
-  display: flex;
   flex-direction: column;
   gap: 4rem;
 }
@@ -269,9 +267,9 @@ main {
 }
 
 .many-friends .wrapper-two {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3rem;
 }
 
 .many-friends .wrapper-two button {
@@ -284,12 +282,6 @@ main {
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--BLUE);
-}
-
-.many-friends .wrapper-two {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
 }
 
 .many-friends .wrapper-two .swiper {
@@ -340,6 +332,67 @@ main {
 .many-friends .wrapper-two .swiper-button-next.swiper-button-disabled svg path,
 .many-friends .wrapper-two .swiper-button-prev.swiper-button-disabled svg path {
   stroke: var(--WHITE);
+}
+
+.about-company {
+  padding: 0 2rem 7rem 2rem;
+  max-width: 136rem;
+
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.about-company .wrapper-one {
+  color: var(--BLUE);
+  text-align: center;
+
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-company .wrapper-one h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.about-company .swiper {
+  width: calc(100vw - 2rem);
+  height: 100%;
+}
+
+.about-company .swiper-slide,
+.about-company .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+
+  border: 0.1rem solid var(--BORDER-RED-OPACITY);
+  border-radius: 2rem;
+  padding: 1rem 1rem 2rem 1rem;
+  width: 25rem;
+  max-width: 30rem;
+
+  color: var(--BLUE);
+  font-size: 1.8rem;
+}
+
+.about-company img {
+  width: 100%;
+}
+
+.about-company .text-wrapper {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.about-company .name {
+  font-weight: 700;
+}
+
+.about-company .wrapper-two {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -414,11 +467,11 @@ main {
     display: inherit;
   }
 
-  .about .wrapper h2 {
+  .about-app .wrapper h2 {
     font-size: 4rem;
   }
 
-  .about .wrapper .card-wrapper {
+  .about-app .wrapper .card-wrapper {
     grid-template:
       "A B" auto
       "C C" auto
@@ -427,23 +480,23 @@ main {
     gap: 1.8rem;
   }
 
-  .about .wrapper .card-wrapper .card:nth-child(1) {
+  .about-app .wrapper .card-wrapper .card:nth-child(1) {
     grid-area: A;
   }
 
-  .about .wrapper .card-wrapper .card:nth-child(2) {
+  .about-app .wrapper .card-wrapper .card:nth-child(2) {
     grid-area: B;
   }
 
-  .about .wrapper .card-wrapper .card:nth-child(3) {
+  .about-app .wrapper .card-wrapper .card:nth-child(3) {
     grid-area: C;
   }
 
-  .about img.mobile {
+  .about-app img.mobile {
     display: none;
   }
 
-  .about img.desktop {
+  .about-app img.desktop {
     display: inherit;
   }
 
@@ -510,6 +563,19 @@ main {
   .many-friends .wrapper-two .swiper-pagination span {
     background-color: var(--WHITE);
   }
+
+  .about-company .swiper {
+    display: none;
+  }
+
+  .about-company .wrapper-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.2rem;
+
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -559,21 +625,21 @@ main {
     font-size: 1.8rem;
   }
 
-  .about {
+  .about-app {
     flex-direction: row-reverse;
 
     padding: 7rem 2rem 7rem 2rem;
   }
 
-  .about .wrapper {
+  .about-app .wrapper {
     padding: 0;
   }
 
-  .about .wrapper h2 {
+  .about-app .wrapper h2 {
     font-size: 4.8rem;
   }
 
-  .about img.desktop {
+  .about-app img.desktop {
     width: 50rem;
   }
 
@@ -606,6 +672,48 @@ main {
   .many-friends .wrapper-two .swiper-slide span {
     font-size: 1.8rem;
   }
+
+  .about-company {
+    display: grid;
+    grid-template:
+      "A" auto
+      "B" auto
+      / 30rem auto;
+    align-items: center;
+  }
+
+  .about-company .wrapper-one h2 {
+    font-size: 4rem;
+  }
+
+  .about-company .wrapper-one p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1214px) {
+  .about-company {
+    grid-template:
+      "A" auto
+      "B" auto
+      / auto;
+  }
+
+  .about-company .wrapper-one {
+    display: grid;
+    grid-template:
+      "A" auto
+      / 30rem auto;
+    align-items: center;
+  }
+
+  .about-company .wrapper-two {
+    justify-content: space-between;
+  }
+
+  .about-company .wrapper-two .card {
+    width: 28rem;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -630,42 +738,45 @@ main {
       / auto 10rem;
   }
 
-  .about {
+  .about-app {
     padding: 10rem 0rem;
 
     gap: 5.6rem;
   }
 
-  .about .wrapper {
+  .about-app .wrapper {
     gap: 4rem;
   }
 
-  .about .wrapper h2 {
+  .about-app .wrapper h2 {
     font-size: 4.8rem;
   }
 
-  .about .wrapper .card-wrapper {
+  .about-app .wrapper .card-wrapper {
     gap: 3.2rem;
   }
 
-  .about .wrapper .card-wrapper .card p {
+  .about-app .wrapper .card-wrapper .card p {
     font-size: 1.6rem;
   }
 
-  .about img.desktop {
+  .about-app img.desktop {
     width: fit-content;
   }
 
-  .many-friends {
+  .many-friends,
+  .about-company {
     margin-inline: auto;
   }
 
-  .many-friends .wrapper-one h2 {
+  .many-friends .wrapper-one h2,
+  .about-company .wrapper-one h2 {
     font-size: 4.8rem;
   }
 
   .many-friends .wrapper-one p,
-  .many-friends .wrapper-two button {
+  .many-friends .wrapper-two button,
+  .about-company .wrapper-one p {
     font-size: 2rem;
   }
 

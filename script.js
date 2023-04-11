@@ -13,7 +13,7 @@ buttonMenu.addEventListener("click", handleMenu)
 
 // Swiper Slides
 
-const swiper = new Swiper(".mySwiper", {
+const manyFriendsSectionSwiper = new Swiper(".many-friends .mySwiper", {
   breakpoints: {
     320: {
       slidesPerView: "auto",
@@ -32,7 +32,13 @@ const swiper = new Swiper(".mySwiper", {
 
       pagination: {
         el: ".swiper-pagination",
+        type: "bullets",
       },
     },
   },
+})
+
+const aboutCompanySectionSwiper = new Swiper(".about-company .mySwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
 })
