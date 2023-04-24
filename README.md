@@ -59,4 +59,4 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 <br>
 <br>
 
-<p align="center"> Desenvolvido com ❤ por <a href="https://elias-neto.github.io/MyWebSite/html/index.html">Elias Neto</a> 👋 <p>
+<p align="center"> Desenvolvido com ❤ por Elias Neto 👋 <p>
